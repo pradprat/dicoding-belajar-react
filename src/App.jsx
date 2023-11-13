@@ -1,10 +1,24 @@
+import InputNotes from "./components/inputNotes"
+import Note from "./components/note"
+
 function App() {
   return (
-    <div className="max-w-xl m-auto p-4 flex flex-col gap-4">
-      <div className="text-xl font-bold text-center">Add Notes</div>
-      <div className="p-4 px-6 border-2 rounded-lg flex flex-col gap-4">
-        <input className="focus:outline-none text-2xl font-semibold" type="text" placeholder="Title" />
-        <textarea placeholder="Write some notes" className="w-full focus:outline-none rounded-lg"></textarea>
+    <div className="max-w-4xl m-auto p-8 pt-16 flex flex-col gap-8 items-center">
+      <div className="max-w-lg flex flex-col gap-4">
+        <div className="text-xl font-bold text-center">Add Notes</div>
+        <InputNotes />
+      </div>
+      <div className="flex flex-col gap-4">
+        <div className="text-xl font-bold text-center">Active Notes</div>
+        <div className="px-6 flex gap-4 flex-wrap justify-center">
+          <Note />
+          <Note />
+          <Note />
+          <Note />
+          <Note />
+          <Note />
+        </div>
+
       </div>
     </div>
   )
