@@ -1,10 +1,11 @@
 import ActiveNotes from "./components/notesList"
 import InputNotes from "./components/inputNotes"
 import { useEffect, useMemo, useState } from "react"
+import { initialData } from "./utils/data"
 
 function App() {
   const [searchText, setsearchText] = useState("")
-  const [notes, setnotes] = useState([])
+  const [notes, setnotes] = useState(initialData)
   const filteredNotes = useMemo(() => {
     return notes.filter((note) => {
       return note.title.toLowerCase().includes(searchText.toLowerCase())

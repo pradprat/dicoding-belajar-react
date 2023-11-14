@@ -9,7 +9,7 @@ const Note = ({
   onMoveNote,
 }) => {
   const moveText = archived ? "Unarchive" : "Archive"
-  return <div className="flex flex-col border-2 rounded-lg w-60 h-40 p-2">
+  return <div className="flex flex-col border-2 rounded-lg w-60 min-h-40 p-2">
     <div className="flex-1">
       <div className="text-2xl font-semibold">{title}</div>
       <div className="text-sm text-gray-400">{new Date(createdAt).toLocaleString()}</div>
